@@ -1,6 +1,6 @@
 package it.alfasoft.andrea;
 
-import java.util.List;
+
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
