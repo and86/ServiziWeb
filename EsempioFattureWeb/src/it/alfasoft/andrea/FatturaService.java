@@ -9,7 +9,7 @@ import javax.jws.WebService;
 public class FatturaService implements IFatturaService {
 	
 	@WebMethod
-	public List<Fattura> prendiTutteFatture(){
+	public Fattura[] prendiTutteFatture(){
 		FatturaDao fDao=new FatturaDao();
 		return fDao.getTutteFatture();
 	}

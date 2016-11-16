@@ -8,6 +8,7 @@ import java.util.Map;
 public class FatturaDao {
 
 	private Map<String,Fattura> fatture;
+	private Fattura []arr;
 
 	public FatturaDao() {
 		
@@ -24,10 +25,13 @@ public class FatturaDao {
 		
 	}
 	
-public List<Fattura> getTutteFatture() {
+public Fattura[] getTutteFatture() {
 		
 	List<Fattura> lista = new ArrayList<Fattura>(fatture.values());
-		return lista;
+	
+	Fattura[] array = lista.toArray(new Fattura[lista.size()]);
+	return array;
+		
 	}
 public Fattura getFatturaConCodiceCliente(String codice){
 	return fatture.get(codice);
